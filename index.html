@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Личное романтичное письмо о языке любви."
+    />
+    <meta name="theme-color" content="#0b0d16" />
+    <title>Наш язык любви</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="scene-lights" aria-hidden="true">
+      <span class="light light--rose"></span>
+      <span class="light light--wine"></span>
+      <span class="light light--gold"></span>
+      <span class="spark spark--one">♡</span>
+      <span class="spark spark--two">✦</span>
+      <span class="spark spark--three">♡</span>
+      <span class="spark spark--four">✧</span>
+      <span class="spark spark--five">✦</span>
+    </div>
+
+    <main class="letter-app" aria-live="polite">
+      <section class="screen screen--intro is-active" data-screen="intro">
+        <div class="intro-copy">
+          <p class="overline">цифровое письмо</p>
+          <h1>Наш язык любви</h1>
+          <div class="intro-text">
+            <p>
+              Я сделал для тебя небольшой сайтик,
+              <span class="nowrap">
+                моя зайка <span class="soft-icon" aria-hidden="true">🐰</span>
+              </span>
+            </p>
+            <p>
+              Это электронное письмо тебе от твоего котика
+              <span class="soft-icon" aria-hidden="true">🐱</span>
+            </p>
+            <p>
+              Ты задала мне три вопроса, и я захотел ответить на них чуть
+              красивее — словами, сердцем и немного кодом.
+            </p>
+          </div>
+          <button class="button button--primary" type="button" data-open-letter>
+            Открыть
+          </button>
+        </div>
+
+        <figure class="portrait" data-portrait>
+          <span class="portrait__glow" aria-hidden="true"></span>
+          <img
+            src="assets/her-photo.jpg"
+            alt="Фотография любимой девушки"
+            data-photo
+          />
+        </figure>
+      </section>
+
+      <section class="screen screen--question" data-screen="question" hidden>
+        <article class="letter-card" data-letter-card>
+          <header class="letter-card__header">
+            <div>
+              <p class="overline" id="progressText">1 из 3</p>
+              <h2 id="questionTitle">Когда я чувствую твою любовь</h2>
+            </div>
+
+            <div
+              class="progress-dots"
+              aria-hidden="true"
+              data-progress-dots
+            ></div>
+          </header>
+
+          <div class="letter-card__body" id="questionText"></div>
+
+          <footer class="letter-card__actions">
+            <button class="button button--ghost" type="button" data-prev>
+              Назад
+            </button>
+            <button class="button button--primary" type="button" data-next>
+              Дальше
+            </button>
+          </footer>
+        </article>
+      </section>
+
+      <section class="screen screen--final" data-screen="final" hidden>
+        <article class="final-card">
+          <p class="overline">последняя страница</p>
+          <h2>Спасибо, что прочитала</h2>
+          <p>
+            Я не идеален в любви, но я хочу учиться нашему языку. Не чужому,
+            не правильному по книжкам, а именно нашему.
+          </p>
+          <button class="button button--primary" type="button" data-finish>
+            Я дочитала ❤️
+          </button>
+        </article>
+      </section>
+
+      <section class="screen screen--afterword" data-screen="afterword" hidden>
+        <article class="afterword-card">
+          <div class="heart-frame">
+            <svg
+              class="heart-frame__svg"
+              viewBox="0 0 512 460"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <linearGradient id="heartGradient" x1="96" y1="24" x2="416" y2="432">
+                  <stop offset="0" stop-color="#f7a7ba" />
+                  <stop offset="0.52" stop-color="#7b2640" />
+                  <stop offset="1" stop-color="#f6d391" />
+                </linearGradient>
+                <radialGradient id="heartShine" cx="34%" cy="22%" r="55%">
+                  <stop offset="0" stop-color="#fff9f5" stop-opacity="0.42" />
+                  <stop offset="0.44" stop-color="#fff9f5" stop-opacity="0.08" />
+                  <stop offset="1" stop-color="#fff9f5" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <path
+                class="heart-frame__path"
+                d="M256 430C126 318 48 246 48 148C48 78 98 31 164 31C204 31 237 51 256 82C275 51 308 31 348 31C414 31 464 78 464 148C464 246 386 318 256 430Z"
+              />
+              <path
+                class="heart-frame__shine"
+                d="M256 430C126 318 48 246 48 148C48 78 98 31 164 31C204 31 237 51 256 82C275 51 308 31 348 31C414 31 464 78 464 148C464 246 386 318 256 430Z"
+              />
+            </svg>
+            <span class="heart-spark heart-spark--one" aria-hidden="true">✦</span>
+            <span class="heart-spark heart-spark--two" aria-hidden="true">♡</span>
+            <span class="heart-spark heart-spark--three" aria-hidden="true">✧</span>
+            <span class="heart-spark heart-spark--four" aria-hidden="true">♡</span>
+            <div class="heart-frame__content">
+              <span class="heart-frame__icon" aria-hidden="true">🐰 ♡ 🐱</span>
+              <h2>Спасибо тебе. Я люблю тебя.</h2>
+              <p>Ты моя нежность. Я твой котик.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
